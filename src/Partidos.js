@@ -44,14 +44,16 @@ export default function Partidos() {
                     </TouchableOpacity>
                 </View>
                 
-                <View style={{borderColor: "#2F3439", borderWidth: 1, paddingHorizontal: 5, paddingVertical: 10, borderRadius: 5 }}>
-                    <Text className="text-center mb-2 text-base font-bold text-slate-300">Mi Apuesta</Text>
-                    <View style={{flexDirection: "row",}}>
-                        <View style={{flex: 1, borderWidth: 1, borderColor: "#2F3439", }}>
+                <View style={{borderColor: "transparent", borderWidth: 1, borderRadius: 5, gap: 5, }}>
+                    <View style={styles.Marcos}>
+                    <Text className="text-center text-base font-bold text-slate-300">Mi Apuesta</Text>
+                    </View>
+                    <View style={{flexDirection: "row", gap: 5, }}>
+                        <View style={[styles.Marcos, {flex: 1, }]}>
                             <Text className="text-xs text-center font-bold text-slate-300">GANADOR</Text>
                             <Text className="text-xs text-center text-slate-300">Apuesta no realizada</Text>
                         </View>
-                        <View style={{flex: 1, borderWidth: 1, borderColor: "#2F3439", }}>
+                        <View style={[styles.Marcos, {flex: 1, }]}>
                             <Text className="text-xs text-center font-bold text-slate-300">RESULTADO</Text>
                             <Text className="text-xs text-center text-slate-300">Apuesta no realizada</Text>
                         </View>
@@ -103,5 +105,11 @@ const styles = StyleSheet.create({
         gap: 8,
         alignItems: "center",
         justifyContent: "center",
+    },
+    Marcos: {
+        borderWidth: 1, 
+        borderColor: "#2F3439", 
+        borderRadius: 5, 
+        paddingVertical: 5, 
     }
 });
